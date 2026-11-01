@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Guide - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li>→</li>
+            <li class="active">Size Guide</li>
+        </ul>
+    </nav>
+
+    <section class="info-page-section">
+        <div class="container">
+            <h1>Size Guide</h1>
+            <p class="subtitle">Find your perfect fit with our comprehensive sizing charts</p>
+
+            <div class="size-guide-content">
+                <!-- Men's Sizes -->
+                <div class="size-section">
+                    <h2>👔 Men's Sizes</h2>
+                    <div class="size-table-container">
+                        <table class="size-table">
+                            <thead>
+                                <tr>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                    <th>CM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>7</td><td>6</td><td>40</td><td>25.0</td></tr>
+                                <tr><td>7.5</td><td>6.5</td><td>40.5</td><td>25.4</td></tr>
+                                <tr><td>8</td><td>7</td><td>41</td><td>25.8</td></tr>
+                                <tr><td>8.5</td><td>7.5</td><td>42</td><td>26.2</td></tr>
+                                <tr><td>9</td><td>8</td><td>42.5</td><td>26.7</td></tr>
+                                <tr><td>9.5</td><td>8.5</td><td>43</td><td>27.1</td></tr>
+                                <tr><td>10</td><td>9</td><td>44</td><td>27.5</td></tr>
+                                <tr><td>10.5</td><td>9.5</td><td>44.5</td><td>27.9</td></tr>
+                                <tr><td>11</td><td>10</td><td>45</td><td>28.3</td></tr>
+                                <tr><td>11.5</td><td>10.5</td><td>45.5</td><td>28.8</td></tr>
+                                <tr><td>12</td><td>11</td><td>46</td><td>29.2</td></tr>
+                                <tr><td>13</td><td>12</td><td>47.5</td><td>30.0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Women's Sizes -->
+                <div class="size-section">
+                    <h2>👗 Women's Sizes</h2>
+                    <div class="size-table-container">
+                        <table class="size-table">
+                            <thead>
+                                <tr>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                    <th>CM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>5</td><td>2.5</td><td>35.5</td><td>22.0</td></tr>
+                                <tr><td>5.5</td><td>3</td><td>36</td><td>22.4</td></tr>
+                                <tr><td>6</td><td>3.5</td><td>36.5</td><td>22.9</td></tr>
+                                <tr><td>6.5</td><td>4</td><td>37.5</td><td>23.3</td></tr>
+                                <tr><td>7</td><td>4.5</td><td>38</td><td>23.8</td></tr>
+                                <tr><td>7.5</td><td>5</td><td>38.5</td><td>24.2</td></tr>
+                                <tr><td>8</td><td>5.5</td><td>39</td><td>24.6</td></tr>
+                                <tr><td>8.5</td><td>6</td><td>40</td><td>25.1</td></tr>
+                                <tr><td>9</td><td>6.5</td><td>40.5</td><td>25.5</td></tr>
+                                <tr><td>9.5</td><td>7</td><td>41</td><td>25.9</td></tr>
+                                <tr><td>10</td><td>7.5</td><td>42</td><td>26.4</td></tr>
+                                <tr><td>11</td><td>8.5</td><td>43</td><td>27.3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Children's Sizes -->
+                <div class="size-section">
+                    <h2>👶 Children's Sizes</h2>
+                    <div class="size-table-container">
+                        <table class="size-table">
+                            <thead>
+                                <tr>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                    <th>CM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>10.5C</td><td>10</td><td>27.5</td><td>16.5</td></tr>
+                                <tr><td>11C</td><td>10.5</td><td>28</td><td>17.0</td></tr>
+                                <tr><td>11.5C</td><td>11</td><td>29</td><td>17.5</td></tr>
+                                <tr><td>12C</td><td>11.5</td><td>30</td><td>18.0</td></tr>
+                                <tr><td>12.5C</td><td>12</td><td>30.5</td><td>18.5</td></tr>
+                                <tr><td>13C</td><td>12.5</td><td>31.5</td><td>19.0</td></tr>
+                                <tr><td>13.5C</td><td>13</td><td>32</td><td>19.5</td></tr>
+                                <tr><td>1Y</td><td>13.5</td><td>32.5</td><td>20.0</td></tr>
+                                <tr><td>1.5Y</td><td>1</td><td>33.5</td><td>20.5</td></tr>
+                                <tr><td>2Y</td><td>1.5</td><td>34</td><td>21.0</td></tr>
+                                <tr><td>2.5Y</td><td>2</td><td>35</td><td>21.5</td></tr>
+                                <tr><td>3Y</td><td>2.5</td><td>35.5</td><td>22.0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- How to Measure -->
+                <div class="measurement-guide">
+                    <h2>📏 How to Measure Your Feet</h2>
+                    <div class="measurement-steps">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Prepare</h3>
+                            <p>Place a piece of paper on a flat surface against a wall</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Position</h3>
+                            <p>Stand on the paper with your heel against the wall</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Mark</h3>
+                            <p>Mark the longest part of your foot on the paper</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h3>Measure</h3>
+                            <p>Measure the distance from the wall to the mark in CM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fitting Tips -->
+                <div class="fitting-tips">
+                    <h2>💡 Fitting Tips</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <span class="tip-icon">👣</span>
+                            <h3>Measure Both Feet</h3>
+                            <p>Your feet may be slightly different sizes. Use the larger measurement.</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🕐</span>
+                            <h3>Measure in the Evening</h3>
+                            <p>Feet tend to swell during the day, so measure when they're largest.</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🧦</span>
+                            <h3>Wear Socks</h3>
+                            <p>Measure with the type of socks you'll wear with the shoes.</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">📐</span>
+                            <h3>Check Width</h3>
+                            <p>If you have wide or narrow feet, consider ordering a half size up or down.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

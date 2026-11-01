@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-content">
+                <div class="success-icon">✅</div>
+                <h1>Order Confirmed!</h1>
+                <p class="confirmation-message">Thank you for your purchase. Your order has been received and is being processed.</p>
+                
+                <div class="order-details-card">
+                    <h2>Order Details</h2>
+                    <div class="detail-row">
+                        <span>Order Number:</span>
+                        <strong id="orderNumber"></strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Order Date:</span>
+                        <strong id="orderDate"></strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Tracking Number:</span>
+                        <strong id="trackingNumber"></strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Estimated Delivery:</span>
+                        <strong id="estimatedDelivery"></strong>
+                    </div>
+                    <div class="detail-row total">
+                        <span>Total Amount:</span>
+                        <strong id="totalAmount"></strong>
+                    </div>
+                </div>
+
+                <div class="order-items-card">
+                    <h3>Order Items</h3>
+                    <div id="orderItemsList"></div>
+                </div>
+
+                <div class="shipping-info-card">
+                    <h3>Shipping Address</h3>
+                    <div id="shippingAddress"></div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="track-order.html" class="btn-primary">Track Your Order</a>
+                    <a href="shop.html" class="btn-secondary">Continue Shopping</a>
+                    <button class="btn-secondary" onclick="window.print()">Print Receipt</button>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-icon">📧</div>
+                            <h4>Confirmation Email</h4>
+                            <p>You'll receive an email confirmation shortly</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">📦</div>
+                            <h4>Order Processing</h4>
+                            <p>We're preparing your items for shipment</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">🚚</div>
+                            <h4>Shipping Updates</h4>
+                            <p>Track your order status in real-time</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">🏠</div>
+                            <h4>Delivery</h4>
+                            <p>Your order will arrive by the estimated date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load order details
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('orderId');
+            
+            if (!orderId) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const order = orders.find(o => o.id === orderId);
+            
+            if (!order) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Display order details
+            document.getElementById('orderNumber').textContent = order.id;
+            document.getElementById('orderDate').textContent = new Date(order.date).toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            document.getElementById('trackingNumber').textContent = order.trackingNumber;
+            document.getElementById('estimatedDelivery').textContent = order.estimatedDelivery;
+            document.getElementById('totalAmount').textContent = `$${order.total.toFixed(2)}`;
+            
+            // Display order items
+            const itemsList = document.getElementById('orderItemsList');
+            itemsList.innerHTML = order.items.map(item => `
+                <div class="confirmation-item">
+                    <span class="item-emoji">👟</span>
+                    <div class="item-info">
+                        <p class="item-name">${item.name}</p>
+                        <p class="item-quantity">Quantity: ${item.quantity}</p>
+                    </div>
+                    <p class="item-price">$${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            `).join('');
+            
+            // Display shipping address
+            const shipping = order.shippingInfo;
+            document.getElementById('shippingAddress').innerHTML = `
+                <p><strong>${shipping.firstName} ${shipping.lastName}</strong></p>
+                <p>${shipping.address}</p>
+                <p>${shipping.city}, ${shipping.state} ${shipping.zip}</p>
+                <p>${shipping.country}</p>
+                <p>Email: ${shipping.email}</p>
+                <p>Phone: ${shipping.phone}</p>
+            `;
+            
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

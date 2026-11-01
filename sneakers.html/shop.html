@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="shop-section">
+        <div class="container">
+            <h1>Shop All Sneakers</h1>
+            
+            <div class="shop-layout">
+                <aside class="filters">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <label><input type="checkbox" value="running"> Running</label>
+                        <label><input type="checkbox" value="lifestyle"> Lifestyle</label>
+                        <label><input type="checkbox" value="training"> Training</label>
+                        <label><input type="checkbox" value="basketball"> Basketball</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <label><input type="checkbox"> Under $100</label>
+                        <label><input type="checkbox"> $100 - $150</label>
+                        <label><input type="checkbox"> $150 - $200</label>
+                        <label><input type="checkbox"> Over $200</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="size-grid">
+                            <button class="size-btn">7</button>
+                            <button class="size-btn">8</button>
+                            <button class="size-btn">9</button>
+                            <button class="size-btn">10</button>
+                            <button class="size-btn">11</button>
+                            <button class="size-btn">12</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="products-area">
+                    <div class="shop-header">
+                        <p>Showing 12 products</p>
+                        <select class="sort-select">
+                            <option>Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest</option>
+                        </select>
+                    </div>
+
+                    <div class="shoe-grid">
+                        <div class="shoe-card fade-in" data-category="running" data-id="1">
+                            <span class="badge new">New</span>
+                            <button class="wishlist-btn" data-id="1" onclick="toggleWishlist(1, 'Air Max Pro')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(1, 'Air Max Pro', 129.99, 'Running')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Running</p>
+                                <h3>Air Max Pro</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(124)</span>
+                                </div>
+                                <p class="price">$129.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(1, 'Air Max Pro', 129.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="lifestyle" data-id="2">
+                            <button class="wishlist-btn" data-id="2" onclick="toggleWishlist(2, 'Urban Runner')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(2, 'Urban Runner', 149.99, 'Lifestyle')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Lifestyle</p>
+                                <h3>Urban Runner</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(89)</span>
+                                </div>
+                                <p class="price">$149.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(2, 'Urban Runner', 149.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="training" data-id="3">
+                            <span class="badge sale">Sale</span>
+                            <button class="wishlist-btn" data-id="3" onclick="toggleWishlist(3, 'Classic Sport')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(3, 'Classic Sport', 99.99, 'Training')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Training</p>
+                                <h3>Classic Sport</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(67)</span>
+                                </div>
+                                <p class="price">$99.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(3, 'Classic Sport', 99.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="basketball" data-id="4">
+                            <button class="wishlist-btn" data-id="4" onclick="toggleWishlist(4, 'Elite Performance')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(4, 'Elite Performance', 179.99, 'Basketball')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Basketball</p>
+                                <h3>Elite Performance</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(156)</span>
+                                </div>
+                                <p class="price">$179.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(4, 'Elite Performance', 179.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="running" data-id="5">
+                            <button class="wishlist-btn" data-id="5" onclick="toggleWishlist(5, 'Speed Racer')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(5, 'Speed Racer', 139.99, 'Running')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Running</p>
+                                <h3>Speed Racer</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(103)</span>
+                                </div>
+                                <p class="price">$139.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(5, 'Speed Racer', 139.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="lifestyle" data-id="6">
+                            <span class="badge new">New</span>
+                            <button class="wishlist-btn" data-id="6" onclick="toggleWishlist(6, 'Street Style')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(6, 'Street Style', 119.99, 'Lifestyle')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Lifestyle</p>
+                                <h3>Street Style</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(78)</span>
+                                </div>
+                                <p class="price">$119.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(6, 'Street Style', 119.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="training" data-id="7">
+                            <button class="wishlist-btn" data-id="7" onclick="toggleWishlist(7, 'Gym Master')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(7, 'Gym Master', 109.99, 'Training')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Training</p>
+                                <h3>Gym Master</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(92)</span>
+                                </div>
+                                <p class="price">$109.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(7, 'Gym Master', 109.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="basketball" data-id="8">
+                            <button class="wishlist-btn" data-id="8" onclick="toggleWishlist(8, 'Court King')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(8, 'Court King', 189.99, 'Basketball')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Basketball</p>
+                                <h3>Court King</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(134)</span>
+                                </div>
+                                <p class="price">$189.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(8, 'Court King', 189.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="running" data-id="9">
+                            <span class="badge new">New</span>
+                            <button class="wishlist-btn" data-id="9" onclick="toggleWishlist(9, 'Marathon Pro')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(9, 'Marathon Pro', 159.99, 'Running')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Running</p>
+                                <h3>Marathon Pro</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(176)</span>
+                                </div>
+                                <p class="price">$159.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(9, 'Marathon Pro', 159.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="shoe-card fade-in" data-category="lifestyle" data-id="10">
+                            <span class="badge sale">Sale</span>
+                            <button class="wishlist-btn" data-id="10" onclick="toggleWishlist(10, 'Casual Comfort')">🤍</button>
+                            <div class="shoe-img" onclick="openQuickView(10, 'Casual Comfort', 94.99, 'Lifestyle')">👟</div>
+                            <div class="shoe-info">
+                                <p class="shoe-category">Lifestyle</p>
+                                <h3>Casual Comfort</h3>
+                                <div class="product-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-count">(89)</span>
+                                </div>
+                                <p class="price">$94.99</p>
+                                <button class="btn-add-cart" onclick="addToCart(10, 'Casual Comfort', 94.99)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickView()">&times;</button>
+            <div class="modal-product">
+                <div class="modal-image">👟</div>
+                <div class="modal-details">
+                    <p class="shoe-category" id="modalProductCategory">Running</p>
+                    <h2 id="modalProductName">Product Name</h2>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(124 reviews)</span>
+                    </div>
+                    <p class="price" id="modalProductPrice">$129.99</p>
+                    <p class="description">Premium sneakers designed for maximum comfort and performance. Features advanced cushioning technology and breathable materials.</p>
+                    <div class="size-selector">
+                        <h4>Select Size:</h4>
+                        <div class="size-options">
+                            <button class="size-option">7</button>
+                            <button class="size-option">8</button>
+                            <button class="size-option">9</button>
+                            <button class="size-option">10</button>
+                            <button class="size-option">11</button>
+                            <button class="size-option">12</button>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="modalAddToCart" style="width: 100%; background: #111; color: #fff; margin-top: 20px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-auth.js"></script>
+    <script src="supabase-products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h1>About SneakerHub</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Welcome to SneakerHub, your ultimate destination for premium footwear. Since our inception, we've been dedicated to bringing you the finest collection of sneakers from around the world.</p>
+                    
+                    <h2>Our Mission</h2>
+                    <p>We believe that the right pair of shoes can transform not just your outfit, but your entire day. That's why we curate only the best sneakers that combine style, comfort, and durability.</p>
+                    
+                    <h2>Why Choose Us?</h2>
+                    <ul class="features-list">
+                        <li>✓ Authentic products from trusted brands</li>
+                        <li>✓ Wide range of styles for every occasion</li>
+                        <li>✓ Competitive prices and regular discounts</li>
+                        <li>✓ Fast and reliable shipping</li>
+                        <li>✓ Excellent customer service</li>
+                    </ul>
+                    
+                    <h2>Our Promise</h2>
+                    <p>At SneakerHub, we're committed to providing you with an exceptional shopping experience. Every pair of shoes we sell is carefully selected to meet our high standards of quality and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear. Quality shoes for every lifestyle.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+            <div class="payment-methods">
+                <span>💳 Visa</span>
+                <span>💳 Mastercard</span>
+                <span>💳 PayPal</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-auth.js"></script>
+    <script src="supabase-products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

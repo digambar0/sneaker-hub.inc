@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Refunds - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li>→</li>
+            <li class="active">Returns & Refunds</li>
+        </ul>
+    </nav>
+
+    <section class="info-page-section">
+        <div class="container">
+            <h1>Returns & Refunds</h1>
+            <p class="subtitle">We want you to be completely satisfied with your purchase</p>
+
+            <div class="returns-content">
+                <!-- Return Policy -->
+                <div class="info-section">
+                    <h2>🔄 Return Policy</h2>
+                    <div class="policy-info">
+                        <p>We offer a 30-day return policy on all unworn items in original condition with tags attached.</p>
+                        <div class="policy-highlights">
+                            <div class="highlight-card">
+                                <span class="highlight-icon">📅</span>
+                                <h3>30 Days</h3>
+                                <p>Return window from delivery date</p>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-icon">💯</span>
+                                <h3>Full Refund</h3>
+                                <p>Get your money back in full</p>
+                            </div>
+                            <div class="highlight-card">
+                                <span class="highlight-icon">🆓</span>
+                                <h3>Free Returns</h3>
+                                <p>On all US orders over $50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Return Process -->
+                <div class="info-section">
+                    <h2>📋 How to Return</h2>
+                    <div class="return-steps">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Initiate Return</h3>
+                            <p>Log into your <a href="dashboard.html">dashboard</a> and select the order you want to return</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Print Label</h3>
+                            <p>Download and print your prepaid return shipping label</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Pack Items</h3>
+                            <p>Place items in original packaging with tags attached</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h3>Ship Back</h3>
+                            <p>Drop off at any carrier location or schedule a pickup</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">5</div>
+                            <h3>Get Refund</h3>
+                            <p>Receive refund within 5-7 business days after we receive your return</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Return Conditions -->
+                <div class="info-section">
+                    <h2>✅ Return Conditions</h2>
+                    <div class="conditions-info">
+                        <h3>Items Must Be:</h3>
+                        <ul class="info-list">
+                            <li>Unworn and in original condition</li>
+                            <li>In original packaging with all tags attached</li>
+                            <li>Returned within 30 days of delivery</li>
+                            <li>Free from odors, stains, or damage</li>
+                            <li>Accompanied by original receipt or order confirmation</li>
+                        </ul>
+                        <h3 style="margin-top: 30px;">Non-Returnable Items:</h3>
+                        <ul class="info-list">
+                            <li>Items marked as "Final Sale"</li>
+                            <li>Worn or damaged items</li>
+                            <li>Items without original tags</li>
+                            <li>Custom or personalized items</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Refund Information -->
+                <div class="info-section">
+                    <h2>💰 Refund Information</h2>
+                    <div class="refund-info">
+                        <p>Once we receive and inspect your return, we'll process your refund:</p>
+                        <div class="refund-timeline">
+                            <div class="timeline-item">
+                                <h4>Day 1-2</h4>
+                                <p>Return received and inspected</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>Day 3-4</h4>
+                                <p>Refund processed and approved</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>Day 5-7</h4>
+                                <p>Refund appears in your account</p>
+                            </div>
+                        </div>
+                        <p class="note">Refunds are issued to the original payment method. Shipping costs are non-refundable unless the return is due to our error.</p>
+                    </div>
+                </div>
+
+                <!-- Exchanges -->
+                <div class="info-section">
+                    <h2>🔁 Exchanges</h2>
+                    <div class="exchange-info">
+                        <p>Need a different size or color? We make exchanges easy!</p>
+                        <ul class="info-list">
+                            <li>Exchanges are processed as a return + new order</li>
+                            <li>Return your original item following the return process</li>
+                            <li>Place a new order for the item you want</li>
+                            <li>We'll refund your original purchase once we receive the return</li>
+                            <li>For faster service, place your new order before returning the original</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- International Returns -->
+                <div class="info-section">
+                    <h2>🌍 International Returns</h2>
+                    <div class="international-returns">
+                        <p>International customers can return items within 30 days:</p>
+                        <ul class="info-list">
+                            <li>Customer is responsible for return shipping costs</li>
+                            <li>Original shipping fees are non-refundable</li>
+                            <li>Customs fees and duties are non-refundable</li>
+                            <li>Contact our support team for return instructions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Damaged or Defective Items -->
+                <div class="info-section">
+                    <h2>⚠️ Damaged or Defective Items</h2>
+                    <div class="damaged-info">
+                        <p>Received a damaged or defective item? We'll make it right!</p>
+                        <ul class="info-list">
+                            <li>Contact us within 48 hours of delivery</li>
+                            <li>Provide photos of the damage or defect</li>
+                            <li>We'll send a replacement or issue a full refund</li>
+                            <li>Return shipping is free for damaged/defective items</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary" style="display: inline-block; margin-top: 20px;">Report an Issue</a>
+                    </div>
+                </div>
+
+                <!-- Contact Support -->
+                <div class="info-section support-section">
+                    <h2>💬 Need Help?</h2>
+                    <p>Have questions about returns or refunds? We're here to help!</p>
+                    <div class="support-options">
+                        <a href="contact.html" class="btn-primary">Contact Us</a>
+                        <a href="faq.html" class="btn-secondary">View FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

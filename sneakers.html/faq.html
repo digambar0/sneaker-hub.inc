@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li>→</li>
+            <li class="active">FAQ</li>
+        </ul>
+    </nav>
+
+    <section class="info-page-section">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p class="subtitle">Find answers to common questions about SneakerHub</p>
+
+            <div class="faq-content">
+                <!-- Ordering -->
+                <div class="faq-category">
+                    <h2>🛒 Ordering</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I place an order?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Browse our collection, select your desired items, choose your size, and click "Add to Cart". Once you're ready, go to your cart and click "Proceed to Checkout". Fill in your shipping and payment information, then confirm your order.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I modify or cancel my order?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Orders can be modified or cancelled within 1 hour of placement. After that, orders are processed and cannot be changed. Contact our support team immediately if you need to make changes.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Do I need an account to place an order?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No, you can checkout as a guest. However, creating an account allows you to track orders, save addresses, view order history, and enjoy faster checkout in the future.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What payment methods do you accept?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, and Google Pay. All payments are processed securely through encrypted connections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping -->
+                <div class="faq-category">
+                    <h2>📦 Shipping & Delivery</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How long does shipping take?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Standard shipping takes 5-7 business days, Express shipping takes 2-3 business days, and Next Day delivery arrives in 1 business day. International shipping varies by location (10-18 days).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Do you offer free shipping?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! We offer free standard shipping on all US orders over $100. International orders have different thresholds based on location.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How can I track my order?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Once your order ships, you'll receive a tracking number via email. You can also track your order on our <a href="track-order.html">Track Order</a> page using your order ID and email address.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Do you ship internationally?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we ship to over 100 countries worldwide. International shipping costs and delivery times vary by location. See our <a href="shipping-info.html">Shipping Information</a> page for details.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Returns & Exchanges -->
+                <div class="faq-category">
+                    <h2>🔄 Returns & Exchanges</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What is your return policy?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We offer a 30-day return policy on all unworn items in original condition with tags attached. Returns are free for US orders over $50. See our <a href="returns.html">Returns</a> page for full details.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I return an item?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Log into your dashboard, select the order you want to return, print the prepaid return label, pack the items with tags attached, and ship them back. You'll receive a refund within 5-7 business days after we receive your return.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I exchange an item for a different size?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! Exchanges are processed as a return + new order. Return your original item and place a new order for the size you want. We'll refund your original purchase once we receive the return.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What if I receive a damaged or defective item?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Contact us within 48 hours of delivery with photos of the damage. We'll send a replacement or issue a full refund immediately. Return shipping is free for damaged or defective items.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="faq-category">
+                    <h2>👟 Products</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Are your products authentic?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, 100%! We only sell authentic products from authorized distributors. Every item comes with a guarantee of authenticity.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I find my size?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Check our comprehensive <a href="size-guide.html">Size Guide</a> which includes measurements in US, UK, EU sizes and centimeters. We also provide measuring instructions to help you find your perfect fit.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>When will out-of-stock items be restocked?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Restock dates vary by product. Sign up for email notifications on product pages to be alerted when items are back in stock.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Do you offer gift cards?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! Gift cards are available in denominations of $25, $50, $100, and $200. They never expire and can be used on any purchase.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account -->
+                <div class="faq-category">
+                    <h2>👤 Account</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I create an account?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Click "Login / Sign Up" in the navigation bar, then select "Sign Up". Enter your email, create a password, and you're all set!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>I forgot my password. What should I do?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Click "Login / Sign Up", then select "Forgot Password". Enter your email address and we'll send you a link to reset your password.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How do I update my account information?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Log into your <a href="dashboard.html">dashboard</a> and go to the Profile Settings tab. You can update your name, email, password, and other account details there.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Can I save multiple shipping addresses?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! In your dashboard, go to the Addresses tab to add, edit, or delete multiple shipping addresses. You can set a default address for faster checkout.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="info-section support-section">
+                    <h2>💬 Still Have Questions?</h2>
+                    <p>Can't find what you're looking for? Our customer service team is here to help!</p>
+                    <div class="support-options">
+                        <a href="contact.html" class="btn-primary">Contact Us</a>
+                        <a href="mailto:support@sneakerhub.com" class="btn-secondary">Email Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-icon').textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ
+            faqItem.classList.toggle('active');
+            
+            if (faqItem.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.textContent = '−';
+            } else {
+                answer.style.maxHeight = null;
+                icon.textContent = '+';
+            }
+        }
+    </script>
+</body>
+</html>

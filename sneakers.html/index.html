@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerHub - Premium Footwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+                <a href="#" class="icon-link">�</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-person-tying-shoelaces-5236/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="tagline">Just Do It</p>
+            <h1>Move The<br>World</h1>
+            <p>Discover premium footwear designed for champions</p>
+            <a href="shop.html" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2 class="fade-in">Featured Collection</h2>
+        <div class="shoe-grid">
+            <div class="shoe-card fade-in" data-id="1">
+                <span class="badge new">New</span>
+                <button class="wishlist-btn" data-id="1" onclick="toggleWishlist(1, 'Air Max Pro')">🤍</button>
+                <div class="shoe-img" onclick="openQuickView(1, 'Air Max Pro', 129.99, 'Running')">👟</div>
+                <div class="shoe-info">
+                    <p class="shoe-category">Running</p>
+                    <h3>Air Max Pro</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(124)</span>
+                    </div>
+                    <p class="price">$129.99</p>
+                    <button class="btn-add-cart" onclick="addToCart(1, 'Air Max Pro', 129.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shoe-card fade-in" data-id="2">
+                <button class="wishlist-btn" data-id="2" onclick="toggleWishlist(2, 'Urban Runner')">🤍</button>
+                <div class="shoe-img" onclick="openQuickView(2, 'Urban Runner', 149.99, 'Lifestyle')">👟</div>
+                <div class="shoe-info">
+                    <p class="shoe-category">Lifestyle</p>
+                    <h3>Urban Runner</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(89)</span>
+                    </div>
+                    <p class="price">$149.99</p>
+                    <button class="btn-add-cart" onclick="addToCart(2, 'Urban Runner', 149.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shoe-card fade-in" data-id="3">
+                <span class="badge sale">Sale</span>
+                <button class="wishlist-btn" data-id="3" onclick="toggleWishlist(3, 'Classic Sport')">🤍</button>
+                <div class="shoe-img" onclick="openQuickView(3, 'Classic Sport', 99.99, 'Training')">👟</div>
+                <div class="shoe-info">
+                    <p class="shoe-category">Training</p>
+                    <h3>Classic Sport</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐</span>
+                        <span class="rating-count">(67)</span>
+                    </div>
+                    <p class="price">$99.99</p>
+                    <button class="btn-add-cart" onclick="addToCart(3, 'Classic Sport', 99.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shoe-card fade-in" data-id="4">
+                <button class="wishlist-btn" data-id="4" onclick="toggleWishlist(4, 'Elite Performance')">🤍</button>
+                <div class="shoe-img" onclick="openQuickView(4, 'Elite Performance', 179.99, 'Basketball')">👟</div>
+                <div class="shoe-info">
+                    <p class="shoe-category">Basketball</p>
+                    <h3>Elite Performance</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(156)</span>
+                    </div>
+                    <p class="price">$179.99</p>
+                    <button class="btn-add-cart" onclick="addToCart(4, 'Elite Performance', 179.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-section">
+        <div class="container">
+            <h2>Our Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-item">Nike</div>
+                <div class="brand-item">Adidas</div>
+                <div class="brand-item">Puma</div>
+                <div class="brand-item">Reebok</div>
+                <div class="brand-item">New Balance</div>
+                <div class="brand-item">Converse</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Best quality shoes I've ever purchased. Fast shipping and excellent customer service!"</p>
+                    <strong>- Sarah M.</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Amazing selection and great prices. Will definitely shop here again!"</p>
+                    <strong>- John D.</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Love my new sneakers! They're comfortable and stylish. Highly recommend!"</p>
+                    <strong>- Emily R.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-banner">
+        <h3>New Arrivals</h3>
+        <p>Check out the latest drops from top brands</p>
+        <a href="shop.html" class="btn-primary" style="background: #111; color: #fff;">Explore Now</a>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive deals and new arrivals</p>
+            <form class="newsletter-form" onsubmit="return subscribeNewsletter(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary" style="background: #111; color: #fff;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear. Quality shoes for every lifestyle.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+            <div class="payment-methods">
+                <span>💳 Visa</span>
+                <span>💳 Mastercard</span>
+                <span>💳 PayPal</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickView()">&times;</button>
+            <div class="modal-product">
+                <div class="modal-image">👟</div>
+                <div class="modal-details">
+                    <p class="shoe-category" id="modalProductCategory">Running</p>
+                    <h2 id="modalProductName">Product Name</h2>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(124 reviews)</span>
+                    </div>
+                    <p class="price" id="modalProductPrice">$129.99</p>
+                    <p class="description">Premium sneakers designed for maximum comfort and performance. Features advanced cushioning technology and breathable materials.</p>
+                    <div class="size-selector">
+                        <h4>Select Size:</h4>
+                        <div class="size-options">
+                            <button class="size-option">7</button>
+                            <button class="size-option">8</button>
+                            <button class="size-option">9</button>
+                            <button class="size-option">10</button>
+                            <button class="size-option">11</button>
+                            <button class="size-option">12</button>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="modalAddToCart" style="width: 100%; background: #111; color: #fff; margin-top: 20px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-auth.js"></script>
+    <script src="supabase-products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

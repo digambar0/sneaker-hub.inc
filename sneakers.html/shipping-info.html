@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li><a href="index.html">Home</a></li>
+            <li>→</li>
+            <li class="active">Shipping Information</li>
+        </ul>
+    </nav>
+
+    <section class="info-page-section">
+        <div class="container">
+            <h1>Shipping Information</h1>
+            <p class="subtitle">Fast and reliable delivery to your doorstep</p>
+
+            <div class="shipping-content">
+                <!-- Shipping Methods -->
+                <div class="info-section">
+                    <h2>🚚 Shipping Methods</h2>
+                    <div class="shipping-methods">
+                        <div class="method-card">
+                            <h3>Standard Shipping</h3>
+                            <p class="method-time">5-7 Business Days</p>
+                            <p class="method-price">$5.99</p>
+                            <p>Perfect for regular orders with no rush</p>
+                        </div>
+                        <div class="method-card">
+                            <h3>Express Shipping</h3>
+                            <p class="method-time">2-3 Business Days</p>
+                            <p class="method-price">$12.99</p>
+                            <p>Faster delivery for urgent orders</p>
+                        </div>
+                        <div class="method-card">
+                            <h3>Next Day Delivery</h3>
+                            <p class="method-time">1 Business Day</p>
+                            <p class="method-price">$24.99</p>
+                            <p>Get your order tomorrow (order before 2 PM)</p>
+                        </div>
+                        <div class="method-card highlight">
+                            <h3>Free Shipping</h3>
+                            <p class="method-time">5-7 Business Days</p>
+                            <p class="method-price">FREE</p>
+                            <p>On orders over $100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Processing Time -->
+                <div class="info-section">
+                    <h2>⏱️ Order Processing</h2>
+                    <div class="processing-info">
+                        <p>Orders are processed within 1-2 business days. You will receive a confirmation email once your order has been shipped with tracking information.</p>
+                        <ul class="info-list">
+                            <li>Orders placed before 2 PM EST ship the same day</li>
+                            <li>Orders placed after 2 PM EST ship the next business day</li>
+                            <li>Weekend orders are processed on Monday</li>
+                            <li>Holiday processing times may vary</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tracking -->
+                <div class="info-section">
+                    <h2>📦 Order Tracking</h2>
+                    <div class="tracking-info">
+                        <p>Track your order easily with our tracking system:</p>
+                        <ol class="info-list">
+                            <li>Check your email for the shipping confirmation</li>
+                            <li>Click the tracking link or visit our <a href="track-order.html">Track Order</a> page</li>
+                            <li>Enter your order ID and email address</li>
+                            <li>View real-time updates on your delivery status</li>
+                        </ol>
+                        <a href="track-order.html" class="btn-primary" style="display: inline-block; margin-top: 20px;">Track Your Order</a>
+                    </div>
+                </div>
+
+                <!-- International Shipping -->
+                <div class="info-section">
+                    <h2>🌍 International Shipping</h2>
+                    <div class="international-shipping">
+                        <p>We ship to over 100 countries worldwide!</p>
+                        <div class="shipping-table-container">
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th>Region</th>
+                                        <th>Delivery Time</th>
+                                        <th>Shipping Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>United States</td><td>5-7 days</td><td>$5.99 (Free over $100)</td></tr>
+                                    <tr><td>Canada</td><td>7-10 days</td><td>$15.99</td></tr>
+                                    <tr><td>Europe</td><td>10-14 days</td><td>$25.99</td></tr>
+                                    <tr><td>Asia</td><td>12-16 days</td><td>$29.99</td></tr>
+                                    <tr><td>Australia</td><td>10-14 days</td><td>$27.99</td></tr>
+                                    <tr><td>South America</td><td>14-18 days</td><td>$32.99</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="note">Note: International orders may be subject to customs fees and import duties determined by your country.</p>
+                    </div>
+                </div>
+
+                <!-- Shipping Restrictions -->
+                <div class="info-section">
+                    <h2>⚠️ Shipping Restrictions</h2>
+                    <div class="restrictions-info">
+                        <ul class="info-list">
+                            <li>We currently do not ship to PO Boxes</li>
+                            <li>APO/FPO addresses are accepted with standard shipping only</li>
+                            <li>Some remote areas may require additional delivery time</li>
+                            <li>Signature may be required for orders over $200</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Support -->
+                <div class="info-section support-section">
+                    <h2>💬 Need Help?</h2>
+                    <p>Have questions about shipping? Our customer service team is here to help!</p>
+                    <div class="support-options">
+                        <a href="contact.html" class="btn-primary">Contact Us</a>
+                        <a href="faq.html" class="btn-secondary">View FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

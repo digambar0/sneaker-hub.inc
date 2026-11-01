@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Sneakers - SneakerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SneakerHub</div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html" class="active">Women</a></li>
+                <li><a href="children.html">Children</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+                <a href="auth.html" class="btn-login" id="authButton">Login / Sign Up</a>
+                <a href="dashboard.html" class="icon-link" id="dashboardIcon" style="display: none;" title="Dashboard">👤</a>
+                <a href="cart.html" class="icon-link" title="Cart">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="category-hero women-hero">
+        <div class="hero-content">
+            <p class="tagline">Women's Collection</p>
+            <h1>Empower<br>Your Style</h1>
+            <p>Premium sneakers designed for the modern woman</p>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" onclick="filterProducts('running')">Running</button>
+                <button class="filter-btn" onclick="filterProducts('lifestyle')">Lifestyle</button>
+                <button class="filter-btn" onclick="filterProducts('training')">Training</button>
+                <button class="filter-btn" onclick="filterProducts('casual')">Casual</button>
+            </div>
+
+            <div class="shoe-grid">
+                <div class="shoe-card fade-in" data-category="running" data-id="201">
+                    <span class="badge new">New</span>
+                    <button class="wishlist-btn" data-id="201" onclick="toggleWishlist(201, 'Air Zoom Pegasus - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(201, 'Air Zoom Pegasus - Women', 124.99, 'Running')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Running</p>
+                        <h3>Air Zoom Pegasus</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(102)</span>
+                        </div>
+                        <p class="price">$124.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(201, 'Air Zoom Pegasus - Women', 124.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="lifestyle" data-id="202">
+                    <button class="wishlist-btn" data-id="202" onclick="toggleWishlist(202, 'Urban Chic - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(202, 'Urban Chic - Women', 139.99, 'Lifestyle')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Lifestyle</p>
+                        <h3>Urban Chic</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <p class="price">$139.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(202, 'Urban Chic - Women', 139.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="training" data-id="203">
+                    <span class="badge sale">Sale</span>
+                    <button class="wishlist-btn" data-id="203" onclick="toggleWishlist(203, 'Flex Trainer - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(203, 'Flex Trainer - Women', 114.99, 'Training')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Training</p>
+                        <h3>Flex Trainer</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating-count">(87)</span>
+                        </div>
+                        <p class="price">$114.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(203, 'Flex Trainer - Women', 114.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="casual" data-id="204">
+                    <button class="wishlist-btn" data-id="204" onclick="toggleWishlist(204, 'Classic Comfort - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(204, 'Classic Comfort - Women', 99.99, 'Casual')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Casual</p>
+                        <h3>Classic Comfort</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(156)</span>
+                        </div>
+                        <p class="price">$99.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(204, 'Classic Comfort - Women', 99.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="running" data-id="205">
+                    <button class="wishlist-btn" data-id="205" onclick="toggleWishlist(205, 'Swift Runner - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(205, 'Swift Runner - Women', 134.99, 'Running')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Running</p>
+                        <h3>Swift Runner</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(94)</span>
+                        </div>
+                        <p class="price">$134.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(205, 'Swift Runner - Women', 134.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="lifestyle" data-id="206">
+                    <span class="badge new">New</span>
+                    <button class="wishlist-btn" data-id="206" onclick="toggleWishlist(206, 'Fashion Forward - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(206, 'Fashion Forward - Women', 144.99, 'Lifestyle')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Lifestyle</p>
+                        <h3>Fashion Forward</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating-count">(78)</span>
+                        </div>
+                        <p class="price">$144.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(206, 'Fashion Forward - Women', 144.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="training" data-id="207">
+                    <button class="wishlist-btn" data-id="207" onclick="toggleWishlist(207, 'Power Fit - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(207, 'Power Fit - Women', 119.99, 'Training')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Training</p>
+                        <h3>Power Fit</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating-count">(71)</span>
+                        </div>
+                        <p class="price">$119.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(207, 'Power Fit - Women', 119.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="casual" data-id="208">
+                    <button class="wishlist-btn" data-id="208" onclick="toggleWishlist(208, 'Everyday Style - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(208, 'Everyday Style - Women', 104.99, 'Casual')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Casual</p>
+                        <h3>Everyday Style</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(143)</span>
+                        </div>
+                        <p class="price">$104.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(208, 'Everyday Style - Women', 104.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="running" data-id="209">
+                    <span class="badge new">New</span>
+                    <button class="wishlist-btn" data-id="209" onclick="toggleWishlist(209, 'React Infinity - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(209, 'React Infinity - Women', 154.99, 'Running')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Running</p>
+                        <h3>React Infinity</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-count">(189)</span>
+                        </div>
+                        <p class="price">$154.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(209, 'React Infinity - Women', 154.99)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="shoe-card fade-in" data-category="lifestyle" data-id="210">
+                    <span class="badge sale">Sale</span>
+                    <button class="wishlist-btn" data-id="210" onclick="toggleWishlist(210, 'Retro Classic - Women')">🤍</button>
+                    <div class="shoe-img" onclick="openQuickView(210, 'Retro Classic - Women', 109.99, 'Lifestyle')">👟</div>
+                    <div class="shoe-info">
+                        <p class="shoe-category">Lifestyle</p>
+                        <h3>Retro Classic</h3>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating-count">(95)</span>
+                        </div>
+                        <p class="price">$109.99</p>
+                        <button class="btn-add-cart" onclick="addToCart(210, 'Retro Classic - Women', 109.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SneakerHub</h4>
+                <p>Your trusted destination for premium footwear.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="children.html">Children</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="shipping-info.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SneakerHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeQuickView()">&times;</button>
+            <div class="modal-product">
+                <div class="modal-image">👟</div>
+                <div class="modal-details">
+                    <p class="shoe-category" id="modalProductCategory">Running</p>
+                    <h2 id="modalProductName">Product Name</h2>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(124 reviews)</span>
+                    </div>
+                    <p class="price" id="modalProductPrice">$129.99</p>
+                    <p class="description">Premium sneakers designed for maximum comfort and performance. Features advanced cushioning technology and breathable materials.</p>
+                    <div class="size-selector">
+                        <h4>Select Size:</h4>
+                        <div class="size-options">
+                            <button class="size-option">7</button>
+                            <button class="size-option">8</button>
+                            <button class="size-option">9</button>
+                            <button class="size-option">10</button>
+                            <button class="size-option">11</button>
+                            <button class="size-option">12</button>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="modalAddToCart" style="width: 100%; background: #111; color: #fff; margin-top: 20px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-auth.js"></script>
+    <script src="supabase-products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
